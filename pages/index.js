@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import reset from 'styled-reset'
 import Sidebar from '../components/Sidebar'
 import Browser from '../components/Browser'
@@ -17,6 +17,7 @@ const SiteContainer = styled.main`
 
 export default function Home() {
   const [image, setImage] = useState({})
+  const browserWindow = useRef(null)
 
   return (
     <SiteContainer>
@@ -29,10 +30,10 @@ export default function Home() {
       </Head>
 
       {image.image
-        ? <Browser width={image.width} height={image.height} image={image.image} />
+        ? <Browser width={image.width} height={image.height} image={image.image} browserRef={browserWindow}/>
         : <ImageUpload setImage={setImage} />
       }
-      <Sidebar />
+      <Sidebar browserRef={browserWindow}/>
     </SiteContainer>
   )
 }
