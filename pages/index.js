@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import { useState } from 'react'
 import reset from 'styled-reset'
-import { SiteContainer } from './index.styles'
 import Sidebar from '../components/Sidebar'
 import Browser from '../components/Browser'
 import ImageUpload from '../components/ImageUpload'
 import styled from 'styled-components'
 
-export const SiteContainer = styled.main`
+const SiteContainer = styled.main`
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   align-items: center;
