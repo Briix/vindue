@@ -33,7 +33,7 @@ export default function Home() {
         ? <Browser width={image.width} height={image.height} image={image.image} browserRef={browserWindow}/>
         : <ImageUpload setImage={setImage} />
       }
-      <Sidebar browserRef={browserWindow}/>
+      <Sidebar browserRef={browserWindow} image={image.image}/>
     </SiteContainer>
   )
 }
