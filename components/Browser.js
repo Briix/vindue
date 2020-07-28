@@ -4,7 +4,7 @@ const BrowserContainer = styled.div`
   padding: 32px;
 
   ${props => props.width && css`
-    width: ${props.width + 64}px;
+    width: ${props.width}px;
   `}
 
   ${props => props.height && css`
@@ -43,7 +43,7 @@ const TitleBarButton = styled.div`
     background-color: ${props.bgColor};
   `}
 
-  ${props => props.borderColor && css `
+  ${props => props.borderColor && css`
     border: 1px solid ${props.borderColor};
   `}
 `
@@ -54,9 +54,9 @@ export default function Browser({ height, width, image, browserRef }) {
       <BrowserWindow>
         <TitleBar>
           <TitleBarButtonContainer>
-            <TitleBarButton bgColor={'#ff5c5c'} borderColor={'#e33e41'}/>
-            <TitleBarButton bgColor={'#ffbd4c'} borderColor={'#e09e3e'}/>
-            <TitleBarButton bgColor={'#00ca56'} borderColor={'#14ae46'}/>
+            <TitleBarButton bgColor={'#ff5c5c'} borderColor={'#e33e41'} />
+            <TitleBarButton bgColor={'#ffbd4c'} borderColor={'#e09e3e'} />
+            <TitleBarButton bgColor={'#00ca56'} borderColor={'#14ae46'} />
           </TitleBarButtonContainer>
         </TitleBar>
         <img src={image} />
